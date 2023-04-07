@@ -7,7 +7,7 @@ and other mods are written in the code, like RP2040 for input shaping, webcam et
 
 # WIKI - Klipper for TwoTrees Sapphire Plus SP5
 
-https://github.com/Travis90x/TwoTrees-Sapphire-Plus-SP5/wiki/Klipper
+https://github.com/Travis90x/TwoTrees-Sapphire-Plus-SP5-Marlin/wiki
 
 # Klipper ADXL345 with RP4020 Zero or Robin Nano
 
