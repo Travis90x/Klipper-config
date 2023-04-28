@@ -1,0 +1,43 @@
+; CURA START GCODE
+M140 S{material_bed_temperature} ; set the bed temperature
+M105 ; report temp
+M190 S{material_bed_temperature} ; wait bed temperature and continue on
+M105 ; report temp
+M104 S{material_print_temperature}; set the extruder temperature
+M105 ; report temp
+M109 S{material_print_temperature}; wait extruder temperature and continue on
+M105 ; report temp
+; G28 ;Home
+; M420 S1 ;Enable ABL using saved Mesh and Fade Height
+CLEAR_PAUSE
+save_last_file
+G90
+G92 E0 ;Reset Extruder
+G1 Z2.0 F3000 ;Move bed down
+G1 X10 Y13 Z0.2 F15000.0 ;Move to start position
+G1 X150 Y13 Z0.2 F1500.0 E10 ;Draw the first line
+;G1 X10 Y150 Z0.2 F5000.0 ;Move to side a little
+; G1 X7 Y155 Z0.025 F2000.0 ;Draw the second line
+G92 E0 ;Reset Extruder
+G1 Z2.0 F3000 ;Move Bed up
+
+; CURA END GCODE
+end_tune
+clear_last_file
+G91 ; Relative positioning
+G1 E-2 F2700 ;Retract a bit
+G1 E-2 Z3 F2400 ;Retract and raise Z
+G1 Z10 ;Raise Z more
+G90 ;Absolute positioning
+; G1 X150 Y150 F3000 ; go to center and cool
+M106 S102
+TURN_OFF_HEATERS
+TIMELAPSE_RENDER
+M18 ;Klipper disables ALL Motors
+M84 ;Klipper disables ALL Motors
+;M109 R50 ; wait extruder cooling - not working in Klipper?
+G4 P10000
+M107 ;Turn-off fan
+;G1 X0 Y{machine_depth} ;Present print
+G90
+END_PRINT
