@@ -12,8 +12,8 @@ BELTX=$(ls -Art /tmp/raw_data_axis=1.000,1*.csv | tail -n 1)
 BELTY=$(ls -Art /tmp/raw_data_axis=1.000,-1*.csv | tail -n 1)
 
 rm /tmp/File_raw_data*.csv > /dev/null 2>&1
-cp "$BELTX" /tmp/Belt_X.csv
-cp "$BELTY" /tmp/Belt_Y.csv
+cp "$BELTX" /tmp/Belt_Up.csv
+cp "$BELTY" /tmp/Belt_Down.csv
 
 ALLCSV=/tmp/raw_data_axis*.csv
 
