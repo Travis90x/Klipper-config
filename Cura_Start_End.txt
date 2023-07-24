@@ -1,40 +1,45 @@
 ; CURA START GCODE
 
-START_PRINT
-; G28 ;Home
-; M420 S1 ;Enable ABL using saved Mesh and Fade Height
-CLEAR_PAUSE
-G90
-G92 E0 ;Reset Extruder
-G1 Z2.0 F3000 ;Move bed down
-G1 X10 Y13 Z0.2 F15000.0 ;Move to start position
+START_PRINT ; Cura
+; G28 ; Cura Home
+; M420 S1 ; Cura Enable ABL using saved Mesh and Fade Height
+CLEAR_PAUSE ; Cura
+G90  ; Cura
+G92 E0 ; Cura Reset Extruder
+M190 S{material_bed_temperature} ; Cura wait bed temperature and continue on
+M109 S{material_print_temperature}; Cura wait extruder temperature and continue on
+G1 Z0.3 F3000 ; Cura Move bed down
+G1 X10 Y13 Z0.2 F15000.0 ; Cura Move to start position
 G1 X150 Y13 Z0.2 F1500.0 E10 ;Draw the first line
 ;G1 X10 Y150 Z0.2 F5000.0 ;Move to side a little
 ; G1 X7 Y155 Z0.025 F2000.0 ;Draw the second line
 G92 E0 ;Reset Extruder
-G1 Z2.0 F3000 E-2 ;Move Bed up
+G1 Z0.3 F3000 E-2 ;Move Bed up
 G92 E0 ;Reset Extruder
-save_last_file
-LAST_START_PRINT
+LAST_START_PRINT ; macro purge
 
 
 ; CURA END GCODE
 
-end_tune  ;Cura
-clear_last_file ;Cura
-G91 ; Relative positioning  ;Cura
-G1 E-2 F2700 ;Retract a bit ;Cura
-G1 E-2 Z3 F2400 ;Retract and raise Z ;Cura
-G1 Z10 ;Raise Z more ;Cura
-G90 ;Absolute positioning ;Cura
-; G1 X150 Y150 F3000 ; go to center and cool
-M106 S102 ;Cura
-TURN_OFF_HEATERS  ;Cura
-TIMELAPSE_RENDER  ;Cura
-M18 ;Klipper disables ALL Motors  ;Cura
-M84 ;Klipper disables ALL Motors  ;Cura
-G4 P10000  ;Cura
-M107 ;Turn-off fan  ;Cura
-;G1 X0 Y{machine_depth} ;Present print  ;Cura
-G90  ;Cura
-END_PRINT  ;Cura
+; M83 ; Cura
+G90 X150 Y-10
+G91 ; Relative positioning  ; Cura
+G10 ; Cura Retract - Firmware Retraction
+G1 E-2 F2700 ;Retract a bit ; Cura
+G1 E-30 Z3 F2400 ;Retract 3cm and raise Z ; Cura
+DISABLE_EXTRUDER ; Cura
+G1 Z10 ;Raise Z more ; Cura
+G90 ;Absolute positioning ; Cura
+; G1 X150 Y150 F3000 ; Cura go to center and cool
+; end_tune  ; Cura Beeper
+clear_last_file ;Cura macro
+M106 S100 ; Cura fan
+TURN_OFF_HEATERS  ; Cura
+TIMELAPSE_RENDER  ; Cura
+M18 ;Klipper disables ALL Motors  ; Cura
+M84 ;Klipper disables ALL Motors  ; Cura
+G4 P10000  ; Cura
+M107 ;Turn-off fan  ; Cura
+;G1 X0 Y{machine_depth} ;Cura Present print
+G90  ; Cura
+END_PRINT  ; Cura
