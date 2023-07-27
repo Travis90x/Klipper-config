@@ -16,9 +16,12 @@ then with putty:
 #### Copy the scripts in in /home/pi/printer_data/config/scripts
 
 
-#### USB_KEY.sh     (This show all USB device connected, es: /dev/sda1 /dev/sda2 /dev/sdb1 etc..)
-#### USB_MOUNT.sh   (This mount without superuser "sudo mount" all /dev/sdXY to /media/pi/XXX)
-#### USB_COPY.sh    (This copy all file in /media/pi/XXX/gcodes in /home/pi/printer_data/gcodes)
+#### USB_KEY.sh
+(This show all USB device connected, es: /dev/sda1 /dev/sda2 /dev/sdb1 etc..)
+#### USB_MOUNT.sh
+(This mount without superuser "sudo mount" all /dev/sdXY to /media/pi/XXX)
+#### USB_COPY.sh
+(This copy all file in /media/pi/XXX/gcodes in /home/pi/printer_data/gcodes)
 
 #### execute in putty
 #### sudo chmod +x /home/pi/printer_data/config/scripts/USB_KEY.sh
