@@ -4,11 +4,11 @@
 ## Copy the content of folder /LOG_CPU/etc_systemd_system/ in your /etc/systemd/system
 then with putty:
 
-sudo systemctl daemon-reload 
+#### sudo systemctl daemon-reload 
 
-sudo systemctl enable log_cpu.timer
+#### sudo systemctl enable log_cpu.timer
 
-sudo systemctl start log_cpu.timer
+#### sudo systemctl start log_cpu.timer
 
 
 #  USB automount and copy USB-KEY/gcodes in /home/pi/printer_data/gcodes
@@ -30,40 +30,13 @@ sudo systemctl start log_cpu.timer
 #### add in printer.cfg add the macros below
 #### (or in printer.cfg add [include shell_command.cfg] and in shell_command.cfg add the macros below)
 
+#### the macros are in https://github.com/Travis90x/TwoTrees-Sapphire-Plus-SP5-Klipper/blob/main/shell_command.cfg
 
-[gcode_macro USB_KEY]
-gcode:
-    RUN_SHELL_COMMAND CMD=USB_KEY
-
-[gcode_shell_command USB_KEY]
-command: sh /home/pi/printer_data/config/scripts/USB_KEY.sh
-timeout: 10.
-verbose: True
-
-
-[gcode_macro USB_MOUNT]
-gcode:
-    RUN_SHELL_COMMAND CMD=USB_MOUNT
-
-[gcode_shell_command USB_MOUNT]
-command: sh /home/pi/printer_data/config/scripts/USB_MOUNT.sh
-timeout: 10.
-verbose: True
-
-[gcode_macro USB_UNMOUNT]
-gcode:
-    RUN_SHELL_COMMAND CMD=USB_UNMOUNT
-
-[gcode_shell_command USB_UNMOUNT]
-command: sh /home/pi/printer_data/config/scripts/USB_UNMOUNT.sh
-timeout: 10.
-verbose: True
-
-[gcode_macro USB_COPY_GCODES]
-gcode:
-    RUN_SHELL_COMMAND CMD=USB_COPY_GCODES
-
-[gcode_shell_command USB_COPY_GCODES]
-command: bash /home/pi/printer_data/config/scripts/USB_COPY.sh
-timeout: 10.
-verbose: True
+#### [gcode_macro USB_KEY]
+#### [gcode_shell_command USB_KEY]
+#### [gcode_macro USB_MOUNT]
+#### [gcode_shell_command USB_MOUNT]
+#### [gcode_macro USB_UNMOUNT]
+#### [gcode_shell_command USB_UNMOUNT]
+#### [gcode_macro USB_COPY_GCODES]
+#### [gcode_shell_command USB_COPY_GCODES]
