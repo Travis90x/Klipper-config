@@ -36,11 +36,18 @@ then with putty:
 ### the macros are in 
 https://github.com/Travis90x/TwoTrees-Sapphire-Plus-SP5-Klipper/blob/main/shell_command.cfg
 
-##### [gcode_macro USB_KEY]
-##### [gcode_shell_command USB_KEY]
-##### [gcode_macro USB_MOUNT]
-#### [gcode_shell_command USB_MOUNT]
-#### [gcode_macro USB_UNMOUNT]
-#### [gcode_shell_command USB_UNMOUNT]
-#### [gcode_macro USB_COPY_GCODES]
-#### [gcode_shell_command USB_COPY_GCODES]
+[gcode_macro USB_KEY]
+
+[gcode_shell_command USB_KEY]
+
+[gcode_macro USB_MOUNT]
+
+gcode_shell_command USB_MOUNT]
+
+[gcode_macro USB_UNMOUNT]
+
+[gcode_shell_command USB_UNMOUNT]
+
+[gcode_macro USB_COPY_GCODES]
+
+[gcode_shell_command USB_COPY_GCODES]
