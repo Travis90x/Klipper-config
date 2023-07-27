@@ -20,6 +20,8 @@ then with putty:
 (This show all USB device connected, es: /dev/sda1 /dev/sda2 /dev/sdb1 etc..)
 #### USB_MOUNT.sh
 (This mount without superuser "sudo mount" all /dev/sdXY to /media/pi/XXX)
+#### USB_UNMOUNT.sh
+(This unmount all /dev/sdXY)
 #### USB_COPY.sh
 (This copy all file in /media/pi/XXX/gcodes in /home/pi/printer_data/gcodes)
 
