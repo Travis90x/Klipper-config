@@ -33,7 +33,8 @@ then with putty:
 ### add in printer.cfg add the macros below
 (or in printer.cfg add [include shell_command.cfg] and in shell_command.cfg add the macros below)
 
-### the macros are in https://github.com/Travis90x/TwoTrees-Sapphire-Plus-SP5-Klipper/blob/main/shell_command.cfg
+### the macros are in 
+https://github.com/Travis90x/TwoTrees-Sapphire-Plus-SP5-Klipper/blob/main/shell_command.cfg
 
 #### [gcode_macro USB_KEY]
 #### [gcode_shell_command USB_KEY]
