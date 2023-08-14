@@ -53,3 +53,8 @@ gcode_shell_command USB_MOUNT]
 [gcode_macro USB_COPY_GCODES]
 
 [gcode_shell_command USB_COPY_GCODES]
+
+
+# Change WIFI
+
+sudo chmod +x /home/pi/printer_data/config/scripts/Change_WIFI.sh
