@@ -11,11 +11,12 @@ BTT Smart Filament Sensor (Encoder)
 and other mods are written in the code, like RP2040 for input shaping, webcam etc etc...
 
 ### The VzBot brach
- is the backup of VzBot 330 AWD Mellow Kit Full Alu
+is the backup of VzBot 330 AWD Mellow Kit Full Alu (Goliat + VZ-Hextrudort-Low
+With RSCS (M106 P2) Exhaust Fan (Hepa Filter with timeout).
 
 ### The SP5 Branch
 is from my old Sapphire Plus V1 (SP5)
-with Diamond Mount Modded for NF Crazy Copper Volcano High Flow + vz-Hextrudort-low + Moon's Motor, Optical Endstops on X Y 2xZ, Bed AC 1000W
+with Diamond Mount Modded for NF Crazy Copper Volcano High Flow + VZ-Hextrudort-Low + Moon's Motor, Optical Endstops on X Y 2xZ, Bed AC 1000W
 on Robin Nano v1.2 the TMC2209x5 in UART are in this order: X Y Z1 Z2 E;
 the endstops pins on the board are for 2x Z Endstops and BLTouch,
 and other mods are written in the code, like RP2040 for input shaping, webcam etc etc...
