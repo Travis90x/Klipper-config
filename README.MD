@@ -1,5 +1,20 @@
 ## ALERT! Read carefully the commented code
-This is the backup of my modded Sapphire Plus V1
+
+### The Main brach
+is the backup of my modded Sapphire Plus V1 (SP5)
+modded Top Frame with 4x 2020, Mellow CNC Gantry X and Sfanella' MGN adapters and support idlers in CNC Aluminum
+with modded VzPrinthead CNC Aluminum (Sfanella version: with Belts tensioner)
+Pheatus Dragon UHF + VZ-Hextrudort-low Liquid + LDO STH20 Motor
+Optical Endstops on X Y 2x Z not synced, Bed AC 1000W
+BTT SKRat with 2x TMC2240 in SPI and 3x TMC2209 in UART in this order: X Y Z1 Z2 E
+BTT Smart Filament Sensor (Encoder)
+and other mods are written in the code, like RP2040 for input shaping, webcam etc etc...
+
+### The VzBot brach
+ is the backup of VzBot 330 AWD Mellow Kit Full Alu
+
+### The SP5 Branch
+is from my old Sapphire Plus V1 (SP5)
 with Diamond Mount Modded for NF Crazy Copper Volcano High Flow + vz-Hextrudort-low + Moon's Motor, Optical Endstops on X Y 2xZ, Bed AC 1000W
 on Robin Nano v1.2 the TMC2209x5 in UART are in this order: X Y Z1 Z2 E;
 the endstops pins on the board are for 2x Z Endstops and BLTouch,
@@ -9,34 +24,11 @@ and other mods are written in the code, like RP2040 for input shaping, webcam et
 
 https://github.com/Travis90x/TwoTrees-Sapphire-Plus-SP5-Marlin/wiki
 
-# Klipper ADXL345 with RP4020 Zero or Robin Nano
-
-Copy scripts in your ~/klipper/scripts/ folder  (ex. /home/pi/klipper/scripts/).
-
-generate-belt-tension-graph.sh
-
-generate-shaper-graph-x.sh
-
-generate-shaper-graph-y.sh 
-
-or take them from https://github.com/Rat-OS/RatOS-configuration/blob/master/scripts/
-
-Copy .cfg files in your /home/pi/klipper_config/
-
-### printer.cfg
-Edit your printer.cfg and add
-
-[include ADXL345.cfg]
-
-[include shell_command.cfg]
-
-### printer.cfg by Giuseppe Di Resta
-https://github.com/pappicio/klipper_config
 
 ### ADXL345.cfg
 is needed for ADXL345 with RP4020 (a clone of Raspberry Pi Pico)
 as a secondary MCU (usb connected, ex. to Android TV Box with Armbian)
-or for ADXL345 connected to Robin Nano v1.2 SDcard pins
+or for ADXL345 connected to Robin Nano SDcard pins
 is needed for TEST_RESONANCES AXIS  and calibrate  input_shaper
 
 Important: with ACCELEROMETER_QUERY and similar, only on the first time you will got an error, so retry the test.
